@@ -1,2 +1,2 @@
-require_relative '../lib/lightswitch/awsc'
+require_relative '../lib/lightswitch/cloud'
 require 'riot'

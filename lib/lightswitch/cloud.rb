@@ -2,7 +2,7 @@ require 'aws-sdk'
 require_relative 'errors'
 
 module Lightswitch
-  class Awsc
+  class Cloud
 
     EC2_REGIONS = %w( eu-central-1 sa-east-1 ap-northeast-1 eu-west-1 us-east-1 us-west-1 us-west-2 ap-southeast-2 ap-southeast-1 )
 

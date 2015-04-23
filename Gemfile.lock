@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    lightswitch-awsc (0.0.1)
+    lightswitch-cloud (0.0.1)
 
 GEM
   remote: https://rubygems.org/
@@ -27,5 +27,5 @@ PLATFORMS
 
 DEPENDENCIES
   aws-sdk
-  lightswitch-awsc!
+  lightswitch-cloud!
   riot
