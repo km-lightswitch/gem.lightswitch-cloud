@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
 
   s.name                = 'lightswitch-cloud'
-  s.version             = '0.0.1'
+  s.version             = '0.0.2'
   s.date                = '2015-03-24'
   s.summary             = 'Turn instances on and off in the cloud at will!'
   s.description         = 'Implements functionality in lightswitch for AWS!'
