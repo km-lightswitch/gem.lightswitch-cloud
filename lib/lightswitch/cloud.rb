@@ -15,6 +15,30 @@ module Lightswitch
       validate_access
     end
 
+    def list_instances(region_name)
+      instance_info = []
+      begin
+        client = get_client(region_name)
+        response = client.describe_instances
+
+        if response
+          instances = response['reservations'].collect do |struct|
+            struct['instances']
+          end
+          instance_info = instances.collect do |instance_struct|
+            instance = instance_struct.first
+            {
+                instance_id: instance.instance_id,
+                name_tag: (instance['tags'].last.value || ''),
+                state: instance.state['name'],
+                public_dns_name: instance.public_dns_name,
+            }
+          end
+        end
+      end
+      instance_info
+    end
+
     def get_instance_status(instance_id, region_name)
       begin
         client = get_client(region_name)
